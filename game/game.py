@@ -18,8 +18,7 @@ def play(player, computer):
         if player == "stop":
             print("Игра завершена!!!")
             break
-
-        print(f"Ваш выбор: {player}")
+            
         print(f"Выбор компьютера: {computer}")
 
         if player in rules[computer]:
