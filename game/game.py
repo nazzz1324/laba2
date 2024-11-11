@@ -6,13 +6,14 @@ rules = {
     "ножницы": {"бумага"},
 }
 
-def play(player, computer):
+def play(computer):
     '''
     Функция запуска и завершения игры "камень, ножинцы, бумага"
     '''
     print("Добро пожаловать в игру камень, ножницы, бумага!!")
 
     while True:
+        player = player_input()
         print(f"Ваш выбор: {player}")
 
         if player == "stop":
@@ -49,7 +50,7 @@ def player_input():
             Функция запрашивающая выбора хода у игрока
     '''
     while True:
-        player = input("Выберите: камень, ножницы, бумага, либо stop для завершения игры: ")
+        player = input("Выберите: камень, ножницы, бумага, либо stop для завершения игры: ").lower()
         if player in choices or player =="stop":
             return player
             break
@@ -60,5 +61,5 @@ def player_input():
 
 
 
-play(player = player_input(), computer= step_computer())
+play(computer= step_computer())
 
